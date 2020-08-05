@@ -145,14 +145,23 @@ add_action( 'widgets_init', 'konferencii2_widgets_init' );
 function konferencii2_scripts() {
 	wp_enqueue_style( 'konferencii2-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'konferencii2-style', 'rtl', 'replace' );
+	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/style/bootstrap.min.css', array(), '4.4.1' );
+	wp_enqueue_style( 'scrollbar', get_template_directory_uri() . '/style/jquery.scrollbar.css', array(), _S_VERSION );
+	
+	wp_enqueue_style( 'konferencii2-main-style', get_template_directory_uri() . '/style/style.css', array(), _S_VERSION );
 
 	wp_enqueue_script( 'konferencii2-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
+	wp_enqueue_script('jquery');
+	wp_register_script( 'konferencii2-scrollbar', get_template_directory_uri() . '/js/jquery.scrollbar.min.js', _S_VERSION, true );
+	wp_register_script( 'konferencii2-main', get_template_directory_uri() . '/js/script.js', array('jquery', 'konferencii2-scrollbar'), _S_VERSION, true );
+	wp_enqueue_script('konferencii2-main');
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'konferencii2_scripts' );
+
 
 /**
  * Implement the Custom Header feature.
