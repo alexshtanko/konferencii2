@@ -25,35 +25,153 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'konferencii2' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$konferencii2_description = get_bloginfo( 'description', 'display' );
-			if ( $konferencii2_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $konferencii2_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+	<header class="header">
+		<div class="header-top-banner">
+			<a href="/" target="_blank" rel="nofollow"><img src="<?php echo bloginfo('template_url'); ?>/img/demo/header-banner.png" alt=""></a>
+		</div><!--header-top-banner end here-->
+		<div class="header-top">
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'konferencii2' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+			<div class="get-mobile-nav" id="getMobileNav">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+
+			<div class="container mobile-nav" id="mobileNav">
+				<div class="row">
+					<div class="col-lg-6 mobile-header-nav">
+						<nav class="header-nav">
+							<ul>
+								<li><a href="#">Информер</a></li>
+								<li><a href="#">Рассылка</a></li>
+								<li><a href="#">Реклама</a></li>
+								<li><a href="#">Обратная связь</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="col-lg-3">
+						<div class="header-banner banner">
+							<a href="#" target="_blank" rel="nofollow"><img src="<?php echo bloginfo('template_url'); ?>/img/demo/banner-1.jpg" alt=""></a>
+						</div>
+					</div>
+					<div class="col-lg-3 mobile-login">
+						<div class="header-login">
+							<ul>
+								<li><a href="#">Вход</a></li>
+								<li><a href="#">Регистрация</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div><!--header-top end here-->
+
+		<div class="header-middle">
+
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-11">
+						<div class="header-site-name">
+							<?php 
+								if ( is_front_page() && is_home() ) :
+							?>
+									<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+							<?php
+								else :
+							?>
+									<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+							<?php
+								endif;
+								$konferencii2_description = get_bloginfo( 'description', 'display' );
+								if ( $konferencii2_description || is_customize_preview() ) :
+							?>
+								<div class="header-site-slogan">
+									<?php echo $konferencii2_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+								</div>
+							<?php endif; ?>
+							
+						</div><!--header-site-name end here-->
+						
+						<a class="btn-add-event" href="#">Добавить мероприятие</a>
+					</div>
+
+					<div class="col-lg-1">
+						<div class="header-sn">
+							<ul>
+								<li><a href="/" target="_blank" rel="nofollow"><img src="<?php echo bloginfo('template_url'); ?>/img/sn-vk.png" alt=""></a></li>	
+								<li><a href="/" target="_blank" rel="nofollow"><img src="<?php echo bloginfo('template_url'); ?>/img/sn-f.png" alt=""></a></li>
+								<li><a href="/" target="_blank" rel="nofollow"><img src="<?php echo bloginfo('template_url'); ?>/img/sn-t.png" alt=""></a></li>
+								<li><a href="/" target="_blank" rel="nofollow"><img src="<?php echo bloginfo('template_url'); ?>/img/sn-o.png" alt=""></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div><!--header-middle end here-->
+
+		<div class="header-bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="header-bottom-inner">
+							<?php get_template_part( 'template-parts/content-header-filter', get_post_type() ); ?>
+							
+							<div class="header-search">
+								<div class="btn-get-search" id="headerGetSearch"><img src="<?php echo bloginfo('template_url'); ?>/img/search.svg" alt=""></div>
+							</div>
+						</div><!--header-bottom-inner end here-->
+					</div>
+				</div>
+			</div>
+
+			<div class="header-search-form" id="headerSearchForm">
+				<div class="container">
+					<div class="rov">
+						<div class="col-lg-12">
+							<div class="header-search-form-inner">
+							<?php // get_search_form(); ?>
+								<div class="header-close-search" id="headerCloseSearch"></div>
+								<form action="#">
+									<input class="inpt-header-search" type="text" name="">
+									<input class="btn-header-search" type="submit" name="" value="">
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!--header-search-form end here-->
+		</div><!--header-bottom end here-->
+
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-9">
+					<div class="header-search-result">
+						<div class="header-search-result-inner">
+							<ul class="btn-search-result-1">
+								<li>Искусство<span></span></li>
+								<!-- <li>Образование<span></span></li> -->
+							</ul>
+
+							<ul class="btn-search-result-2">
+								<li>Искусство<span></span></li>
+								<!-- <li>Образование<span></span></li> -->
+							</ul>
+
+							<ul class="btn-search-result-3">
+								<li>Искусство<span></span></li>
+								<!-- <li>Образование<span></span></li> -->
+							</ul>
+						</div>
+						<div class="filter-reset">
+							<a class="btn-filter-reset" href="#">Сбросить фильтры</a>
+						</div>
+					</div><!--header-search-result end here-->
+				</div>
+			</div>
+		</div>
+		
+		
+	</header><!--header end here-->
