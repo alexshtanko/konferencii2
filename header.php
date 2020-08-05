@@ -99,10 +99,10 @@
 					<div class="col-lg-1">
 						<div class="header-sn">
 							<ul>
-								<li><a href="/" target="_blank" rel="nofollow"><img src="<?php echo bloginfo('template_url'); ?>/img/sn-vk.png" alt=""></a></li>	
-								<li><a href="/" target="_blank" rel="nofollow"><img src="<?php echo bloginfo('template_url'); ?>/img/sn-f.png" alt=""></a></li>
-								<li><a href="/" target="_blank" rel="nofollow"><img src="<?php echo bloginfo('template_url'); ?>/img/sn-t.png" alt=""></a></li>
-								<li><a href="/" target="_blank" rel="nofollow"><img src="<?php echo bloginfo('template_url'); ?>/img/sn-o.png" alt=""></a></li>
+								<li><a href="/" target="_blank" rel="nofollow"><img src="<?php echo bloginfo('template_url'); ?>/img/sn-vk.png" alt="VKontakte"></a></li>	
+								<li><a href="/" target="_blank" rel="nofollow"><img src="<?php echo bloginfo('template_url'); ?>/img/sn-f.png" alt="Facebook"></a></li>
+								<li><a href="/" target="_blank" rel="nofollow"><img src="<?php echo bloginfo('template_url'); ?>/img/sn-t.png" alt="Twitter"></a></li>
+								<li><a href="/" target="_blank" rel="nofollow"><img src="<?php echo bloginfo('template_url'); ?>/img/sn-o.png" alt="Одноклассники"></a></li>
 							</ul>
 						</div>
 					</div>
