@@ -190,3 +190,37 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+//Добавляем тип записи "Конференция"
+add_action('init', 'my_custom_post');
+function my_custom_post(){
+	register_post_type('conference', array(
+		'labels'             => array(
+			'name'               => 'Конференции', // Основное название типа записи
+			'singular_name'      => 'Конференция', // отдельное название записи типа Book
+			'add_new'            => 'Добавить новую',
+			'add_new_item'       => 'Добавить новую конференцию',
+			'edit_item'          => 'Редактировать конференцию',
+			'new_item'           => 'Новая конференция',
+			'view_item'          => 'Посмотреть конференцию',
+			'search_items'       => 'Найти конференцию',
+			'not_found'          =>  'Конференций не найдено',
+			'not_found_in_trash' => 'В корзине конференций не найдено',
+			'parent_item_colon'  => '',
+			'menu_name'          => 'Конференции'
+
+		  ),
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => true,
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => 2,
+		'menu_icon'			 => 'dashicons-clipboard',
+		'supports'           => array('title','editor','author'),
+	) );
+}
+
