@@ -1,0 +1,47 @@
+@import "header-top-banner";
+
+.header{
+	
+	// height: 500px;
+	// padding-top: 110px;
+	position: relative;
+}
+
+.header-top{
+	padding-top: 15px;
+}
+
+@import "header-nav";
+
+@import "header-login";
+
+@import "header-middle";
+
+@import "header-sn";
+
+@import "header-bottom";
+
+@import "header-filter";
+
+@import "header-search";
+
+@import "header-search-result";
+
+.header-banner{
+	
+}
+.banner{
+	position: relative;
+	&:before{
+		content: '';
+		width: 10px;
+		height: 10px;
+		background: #ffb806;
+		border: 2px solid #ffffff;
+		border-radius: 360px;
+		position: absolute;
+		left: -5px;
+		top: -5px;
+		z-index: 2;
+	}
+}

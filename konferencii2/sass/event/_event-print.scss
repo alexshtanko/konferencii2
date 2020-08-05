@@ -1,0 +1,21 @@
+.evennt-print{
+	margin-top: 25px;
+	text-align: right;
+	a{
+		position: relative;
+		font-size: .875rem;
+		font-weight: bold;
+		padding-left: 35px;
+		color: #5e5e5e;
+		&:before{
+			content: '';
+			display: block;
+			width: 25px;
+			height: 25px;
+			background: url('../img/print.png') no-repeat center;
+			position: absolute;
+			left: 0;
+			top: -1px;
+		}
+	}
+}

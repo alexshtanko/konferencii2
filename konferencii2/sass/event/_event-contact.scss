@@ -1,0 +1,56 @@
+.event-contact{
+	background: #f8f8f8;
+	margin-left: -15px;
+	margin-right: -15px;
+	padding: 15px 15px 25px;
+	.btn-add-bid{
+		margin-top: 20px;
+	}
+	.event-contact-title{
+		font-size: 1rem;
+		font-weight: bold;
+		color: $color-blue;
+		line-height: 2rem;
+	}
+	p{
+		font-size: 1rem;
+		color: #626262;
+		line-height: 2rem;
+		a{
+			color: inherit;
+		}
+	}
+	.event-contact-email{
+		&:before{
+			content: '';
+			display: inline-block;
+			background: url('../img/mail.svg') no-repeat center center;
+			background-size: cover;
+			width: 18px;
+			height: 14px;
+			margin-right: 8px;
+			position: relative;
+			top: 2px;
+		}
+	}
+	.row{
+		margin-top: 20px;
+		&:first-child{
+			margin-top: 0;
+		}
+	}
+	.event-contact-time-left{
+		font-weight: bold;
+		font-size: 1rem;
+		color: #902929;
+		line-height: 2.75rem; /*44*/
+	}
+}
+
+@media (min-width: 992px){
+	.event-contact{
+		.btn-add-bid{
+			margin-top: 0;
+		}
+	}
+}

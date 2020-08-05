@@ -1,0 +1,89 @@
+.home-pagination{
+	text-align: center;
+	padding-top: 50px;
+	a,
+	span{
+		width: 28px;
+		height: 28px;
+		margin: 0 3px;
+		display: inline-block;
+		font-size: 1rem; 	/*16*/
+		line-height: 1.6875rem; 	/*27*/
+		text-align: center;
+		border-radius: 50px;
+		border: 1px solid $color-white;
+		color: #bebebe;
+		&:hover{
+			text-decoration: none;
+		}
+		
+	}
+	.current{
+		color: $color-yellow;
+		border: 1px solid $color-yellow;
+	}
+	.prev{
+		background: $color-blue;
+		margin-right: 30px;
+		color: $color-white;
+		position: relative;
+		&:before{
+			content: '';
+			display: block;
+			width: 1px;
+			height: 6px;
+			position: absolute;
+			left: 12px;
+			top: 8px;
+			background: $color-white;
+			@include rotate(45deg);
+		}
+		&:after{
+			content: '';
+			display: block;
+			width: 1px;
+			height: 6px;
+			position: absolute;
+			left: 12px;
+			top: 12px;
+			background: $color-white;
+			@include rotate(-45deg);
+		}
+	}
+	.next{
+		background: $color-blue;
+		margin-left: 30px;
+		color: $color-white;
+		position: relative;
+		&:before{
+			content: '';
+			display: block;
+			width: 1px;
+			height: 6px;
+			position: absolute;
+			left: 13px;
+			top: 8px;
+			background: $color-white;
+			@include rotate(-45deg);
+		}
+		&:after{
+			content: '';
+			display: block;
+			width: 1px;
+			height: 6px;
+			position: absolute;
+			left: 13px;
+			top: 12px;
+			background: $color-white;
+			@include rotate(45deg);
+		}
+	}
+	.prev.disable,
+	.next.disable{
+		background: #e1e1e1;
+		&:before,
+		&:after{
+			background: #b4b4b4;
+		}
+	}
+}

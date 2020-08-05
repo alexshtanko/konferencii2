@@ -1,0 +1,52 @@
+.header-login{
+	text-align: center;
+	padding-top: 8px;
+	li{
+		display: inline-block;
+		margin-left: 6px;
+		&:before{
+			content: '';
+			height: 16px;
+			width: 2px;
+			position: relative;
+			top: 4px;
+			background: #89c5e5;
+			display: inline-block;
+			@include rotate(15deg);
+		}
+		&:first-child{
+			margin-left: 0;
+			&:before{
+				display: none;
+			}
+			a{
+				margin-left: 0;
+				&:before{
+					content: '';
+					background: url('../img/icon-login.png') no-repeat center center;
+					width: 15px;
+					height: 15px;
+					display: inline-block;
+					position: relative;
+					top: 3px;
+					margin-right: 11px;
+				}
+			}
+		}
+		a{
+			margin-left: 8px;
+		}
+	}
+	a{
+		font-size: 14px;
+		line-height: 27px;
+		color: #444444;
+	}
+}
+
+
+@media (min-width: 992px){
+	.header-login{
+		text-align: right;
+	}
+}

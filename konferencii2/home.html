@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<title>Конференции</title>
+	<link rel="stylesheet" href="style/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style/jquery.scrollbar.css">
+	<!-- <link rel="stylesheet" type="text/css" href="style/prettify.css"> -->
+	<link rel="stylesheet" href="style/style.css">
+
+</head>
+<body>
+
+	<header class="header">
+		<div class="header-top-banner">
+			<a href="#"><img src="img/banner/header-banner.png" alt=""></a>
+		</div><!--header-top-banner end here-->
+		<div class="header-top">
+
+			<div class="get-mobile-nav" id="getMobileNav">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+
+			<div class="container mobile-nav" id="mobileNav">
+				<div class="row">
+					<div class="col-lg-6 mobile-header-nav">
+						<nav class="header-nav">
+							<ul>
+								<li><a href="#">Информер</a></li>
+								<li><a href="#">Рассылка</a></li>
+								<li><a href="#">Реклама</a></li>
+								<li><a href="#">Обратная связь</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="col-lg-3">
+						<div class="header-banner banner">
+							<a href="#"><img src="img/banner/banner-1.jpg" alt="Banner123"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 mobile-login">
+						<div class="header-login">
+							<ul>
+								<li><a href="#">Вход</a></li>
+								<li><a href="#">Регистрация</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div><!--header-top end here-->
+
+		<div class="header-middle">
+
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-11">
+						<div class="header-site-name">
+							<a href="#">Конференции.ru</a>
+						</div>
+						<div class="header-site-slogan">
+							Открытый каталог научных конференций, выставок и семинаров
+						</div>
+						<a class="btn-add-event" href="#">Добавить мероприятие</a>
+					</div>
+
+					<div class="col-lg-1">
+						<div class="header-sn">
+							<ul>
+								<li><a href="#"><img src="img/sn-vk.png" alt=""></a></li>
+								<li><a href="#"><img src="img/sn-f.png" alt=""></a></li>
+								<li><a href="#"><img src="img/sn-t.png" alt=""></a></li>
+								<li><a href="#"><img src="img/sn-o.png" alt=""></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div><!--header-middle end here-->
+
+		<div class="header-bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="header-bottom-inner">
+							<div class="header-filter">
+								<div class="filter-item">
+									<div class="header-filter-title subject">Тематика</div>
+
+									<div class="header-filter-body">
+										<div class="scrollbar-inner">
+											<div class="scrollbar-inner-content">
+												<ul class="subject-list">
+													<li>
+														<input id="1" type="checkbox" name="">
+														<label for="1">Безопасность</label>
+													</li>
+													<li>
+														<input id="2" type="checkbox" name="">
+														<label for="2">Безопасность</label>
+													</li>
+													<li>
+														<input id="3" type="checkbox" name="">
+														<label for="3">Безопасность</label>
+													</li>
+													<li>
+														<input id="4" type="checkbox" name="">
+														<label for="4">Безопасность</label>
+													</li>
+													<li>
+														<input id="5" type="checkbox" name="">
+														<label for="5">Безопасность</label>
+													</li>
+													<li>
+														<input id="6" type="checkbox" name="">
+														<label for="6">Безопасность</label>
+													</li>
+													<li>
+														<input id="7" type="checkbox" name="">
+														<label for="7">Безопасность</label>
+													</li>
+													<li>
+														<input id="8" type="checkbox" name="">
+														<label for="8">Безопасность</label>
+													</li>
+													<li>
+														<input id="9" type="checkbox" name="">
+														<label for="9">Безопасность</label>
+													</li>
+													<li>
+														<input id="10" type="checkbox" name="">
+														<label for="10">Безопасность</label>
+													</li>
+													<li>
+														<input id="11" type="checkbox" name="">
+														<label for="11">Безопасность</label>
+													</li>
+													<li>
+														<input id="12" type="checkbox" name="">
+														<label for="12">Безопасность</label>
+													</li>
+													<li>
+														<input id="13" type="checkbox" name="">
+														<label for="13">Безопасность</label>
+													</li>
+													<li>
+														<input id="14" type="checkbox" name="">
+														<label for="14">Безопасность</label>
+													</li>
+													<li>
+														<input id="15" type="checkbox" name="">
+														<label for="15">Безопасность</label>
+													</li>
+													<li>
+														<input id="16" type="checkbox" name="">
+														<label for="16">Безопасность</label>
+													</li>
+													<li>
+														<input id="17" type="checkbox" name="">
+														<label for="17">Безопасность</label>
+													</li>
+													<li>
+														<input id="18" type="checkbox" name="">
+														<label for="18">Безопасность</label>
+													</li>
+													<li>
+														<input id="19" type="checkbox" name="">
+														<label for="19">Безопасность</label>
+													</li>
+												</ul>
+											</div>
+										</div>
+
+										<div class="header-filter-body-footer">
+											<button class="btn-filter-submit">Применить</button>
+										</div>
+									</div><!--header-filter-body end here-->
+								</div>
+
+								<div class="filter-item">
+									<div class="header-filter-title date">Дата</div>
+
+									<div class="header-filter-body">
+										<!-- <div class="scrollbar-inner"> -->
+											<div class="scrollbar-inner-content">
+												Text
+											</div>
+										<!-- </div> -->
+
+										<div class="header-filter-body-footer">
+											<button class="btn-filter-submit">Применить</button>
+										</div>
+									</div><!--header-filter-body end here-->
+								</div>
+
+								<div class="filter-item">
+									<div class="header-filter-title location">Место проведения</div>
+
+									<div class="header-filter-body">
+										<!-- <div class="scrollbar-inner"> -->
+											<div class="scrollbar-inner-content">
+												Text
+											</div>
+										<!-- </div> -->
+
+										<div class="header-filter-body-footer">
+											<button class="btn-filter-submit">Применить</button>
+										</div>
+									</div><!--header-filter-body end here-->
+								</div>
+
+								<div class="filter-item">
+									<div class="header-filter-title other">Другие параметры</div>
+
+									<div class="header-filter-body">
+										<!-- <div class="scrollbar-inner"> -->
+											<div class="scrollbar-inner-content">
+												Text
+											</div>
+										<!-- </div> -->
+
+										<div class="header-filter-body-footer">
+											<button class="btn-filter-submit">Применить</button>
+										</div>
+									</div><!--header-filter-body end here-->
+								</div>
+							</div>
+							<div class="header-search">
+								<div class="btn-get-search" id="headerGetSearch"><img src="img/search.svg"></div>
+							</div>
+						</div><!--header-bottom-inner end here-->
+					</div>
+				</div>
+			</div>
+
+			<div class="header-search-form" id="headerSearchForm">
+				<div class="container">
+					<div class="rov">
+						<div class="col-lg-12">
+							<div class="header-search-form-inner">
+								<div class="header-close-search" id="headerCloseSearch"></div>
+								<form action="#">
+									<input class="inpt-header-search" type="text" name="">
+									<input class="btn-header-search" type="submit" name="" value="">
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!--header-search-form end here-->
+		</div><!--header-bottom end here-->
+
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-9">
+					<div class="header-search-result">
+						<div class="header-search-result-inner">
+							<ul class="btn-search-result-1">
+								<li>Искусство<span></span></li>
+								<!-- <li>Образование<span></span></li> -->
+							</ul>
+
+							<ul class="btn-search-result-2">
+								<li>Искусство<span></span></li>
+								<!-- <li>Образование<span></span></li> -->
+							</ul>
+
+							<ul class="btn-search-result-3">
+								<li>Искусство<span></span></li>
+								<!-- <li>Образование<span></span></li> -->
+							</ul>
+						</div>
+						<div class="filter-reset">
+							<a class="btn-filter-reset" href="#">Сбросить фильтры</a>
+						</div>
+					</div><!--header-search-result end here-->
+				</div>
+			</div>
+		</div>
+		
+		
+	</header><!--header end here-->
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-9">
+				<main class="site-main">
+
+					<div class="row">
+						<div class="col-lg-8">
+							<div class="home-title">
+								<h1><span>Анонсы</span> научных мероприятий</h1>
+							</div>
+						</div>
+
+						<div class="col-lg-4">
+							<div class="home-title-banner banner">
+								<a href="#"><img src="img/banner/banner-1.jpg" alt=""></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="event-month-filter">
+						<ul>
+							<li><a href="#">Октябрь 2019</a></li>
+						</ul>
+					</div>
+
+					<div class="home-event-list">
+
+						<div class="home-event-item priority status-open">
+
+							<div class="home-event-item-header">
+								<div class="row">
+									<div class="col-lg-8">
+										<div class="home-event-item-header-date">
+											30 сентября – 2 октября 2019 г., срок заявок: 29 сентября 2019 г.
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="home-event-item-header-location">
+											Россия, Москва
+										</div>
+									</div>
+								</div>
+							</div><!--home-event-item-header end here-->
+
+							<div class="home-event-item-body">
+								<h2><a href="#">X Международная научно-практическая конференция «Научная дискуссия современной молодёжи: актуальные вопросы, достижения и инновации»</a></h2>
+
+								<p>Научно-издательский центр «Актуальность.РФ», Московский государственный университет, Пензенский государственный университет</p>
+							</div>
+
+							<div class="home-event-item-footer">
+								<p><a href="#">Конференции</a>, <a href="#">РИНЦ</a>, <a href="#">Scopus</a> · Очная, Заочная, On-line · Естественные науки, Молодые ученые, Педагогика, Экономика, Управление, Финансы, Юридические науки</p>
+							</div>
+
+						</div><!--home-event-item end here-->
+
+						<div class="home-event-item status-end">
+
+							<div class="home-event-item-header">
+								<div class="row">
+									<div class="col-lg-8">
+										<div class="home-event-item-header-date">
+											30 сентября – 2 октября 2019 г., срок заявок: 29 сентября 2019 г.
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="home-event-item-header-location">
+											Россия, Москва
+										</div>
+									</div>
+								</div>
+							</div><!--home-event-item-header end here-->
+
+							<div class="home-event-item-body">
+								<h2><a href="#">X Международная научно-практическая конференция «Научная дискуссия современной молодёжи: актуальные вопросы, достижения и инновации»</a></h2>
+
+								<p>Научно-издательский центр «Актуальность.РФ», Московский государственный университет, Пензенский государственный университет</p>
+							</div>
+
+							<div class="home-event-item-footer">
+								<p><a href="#">Конференции</a>, <a href="#">РИНЦ</a>, <a href="#">Scopus</a> · Очная, Заочная, On-line · Естественные науки, Молодые ученые, Педагогика, Экономика, Управление, Финансы, Юридические науки</p>
+							</div>
+							
+						</div><!--home-event-item end here-->
+
+						<div class="home-event-item priority status-ends">
+
+							<div class="home-event-item-header">
+								<div class="row">
+									<div class="col-lg-8">
+										<div class="home-event-item-header-date">
+											30 сентября – 2 октября 2019 г., срок заявок: 29 сентября 2019 г.
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="home-event-item-header-location">
+											Россия, Москва
+										</div>
+									</div>
+								</div>
+							</div><!--home-event-item-header end here-->
+
+							<div class="home-event-item-body">
+								<h2><a href="#">X Международная научно-практическая конференция «Научная дискуссия современной молодёжи: актуальные вопросы, достижения и инновации»</a></h2>
+
+								<p>Научно-издательский центр «Актуальность.РФ», Московский государственный университет, Пензенский государственный университет</p>
+							</div>
+
+							<div class="home-event-item-footer">
+								<p><a href="#">Конференции</a>, <a href="#">РИНЦ</a>, <a href="#">Scopus</a> · Очная, Заочная, On-line · Естественные науки, Молодые ученые, Педагогика, Экономика, Управление, Финансы, Юридические науки</p>
+							</div>
+							
+						</div><!--home-event-item end here-->
+
+						<div class="home-event-banner banner">
+							<a href="#"><img src="img/banner/banner-2.jpg"></a>
+						</div>
+
+						<div class="home-event-item priority status-ends">
+
+							<div class="home-event-item-header">
+								<div class="row">
+									<div class="col-lg-8">
+										<div class="home-event-item-header-date">
+											30 сентября – 2 октября 2019 г., срок заявок: 29 сентября 2019 г.
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="home-event-item-header-location">
+											Россия, Москва
+										</div>
+									</div>
+								</div>
+							</div><!--home-event-item-header end here-->
+
+							<div class="home-event-item-body">
+								<h2><a href="#">X Международная научно-практическая конференция «Научная дискуссия современной молодёжи: актуальные вопросы, достижения и инновации»</a></h2>
+
+								<p>Научно-издательский центр «Актуальность.РФ», Московский государственный университет, Пензенский государственный университет</p>
+							</div>
+
+							<div class="home-event-item-footer">
+								<p><a href="#">Конференции</a>, <a href="#">РИНЦ</a>, <a href="#">Scopus</a> · Очная, Заочная, On-line · Естественные науки, Молодые ученые, Педагогика, Экономика, Управление, Финансы, Юридические науки</p>
+							</div>
+							
+						</div><!--home-event-item end here-->
+
+						<div class="home-event-item priority status-ends">
+
+							<div class="home-event-item-header">
+								<div class="row">
+									<div class="col-lg-8">
+										<div class="home-event-item-header-date">
+											30 сентября – 2 октября 2019 г., срок заявок: 29 сентября 2019 г.
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="home-event-item-header-location">
+											Россия, Москва
+										</div>
+									</div>
+								</div>
+							</div><!--home-event-item-header end here-->
+
+							<div class="home-event-item-body">
+								<h2><a href="#">X Международная научно-практическая конференция «Научная дискуссия современной молодёжи: актуальные вопросы, достижения и инновации»</a></h2>
+
+								<p>Научно-издательский центр «Актуальность.РФ», Московский государственный университет, Пензенский государственный университет</p>
+							</div>
+
+							<div class="home-event-item-footer">
+								<p><a href="#">Конференции</a>, <a href="#">РИНЦ</a>, <a href="#">Scopus</a> · Очная, Заочная, On-line · Естественные науки, Молодые ученые, Педагогика, Экономика, Управление, Финансы, Юридические науки</p>
+							</div>
+							
+						</div><!--home-event-item end here-->
+
+						<div class="home-event-item priority status-ends">
+
+							<div class="home-event-item-header">
+								<div class="row">
+									<div class="col-lg-8">
+										<div class="home-event-item-header-date">
+											30 сентября – 2 октября 2019 г., срок заявок: 29 сентября 2019 г.
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="home-event-item-header-location">
+											Россия, Москва
+										</div>
+									</div>
+								</div>
+							</div><!--home-event-item-header end here-->
+
+							<div class="home-event-item-body">
+								<h2><a href="#">X Международная научно-практическая конференция «Научная дискуссия современной молодёжи: актуальные вопросы, достижения и инновации»</a></h2>
+
+								<p>Научно-издательский центр «Актуальность.РФ», Московский государственный университет, Пензенский государственный университет</p>
+							</div>
+
+							<div class="home-event-item-footer">
+								<p><a href="#">Конференции</a>, <a href="#">РИНЦ</a>, <a href="#">Scopus</a> · Очная, Заочная, On-line · Естественные науки, Молодые ученые, Педагогика, Экономика, Управление, Финансы, Юридические науки</p>
+							</div>
+							
+						</div><!--home-event-item end here-->
+
+						<div class="home-event-banner banner">
+							<a href="#"><img src="img/banner/banner-2.jpg"></a>
+						</div>
+
+
+					</div><!--home-event-list end here-->
+
+					<div class="home-event-load-more">
+						<button class="btn-load-more-event">Загрузить ещё</button>
+					</div><!--home-event-load-more end here-->
+
+					<div class="home-pagination">
+						
+							<span class="prev disable" >&nbsp;</span>
+							<span class="page-numbers inactive current">1</span>
+							<a charset="page-numbers inactive" href="#">2</a>
+							<a charset="page-numbers inactive" href="#">3</a>
+							<a charset="page-numbers inactive" href="#">4</a>
+							<span class="page-numbers inactive dots">...</span>
+							<a class="page-numbers inactive" href="#">125</a>
+							<a class="next page-numbers inactive" href="#">&nbsp;</a>
+
+						
+					</div><!--home-pagination end here-->
+
+					
+
+				</main><!--site-main end here-->
+			</div>
+			<div class="col-lg-3">
+				<aside class="sidebar">
+					
+					<div class="widget">
+
+						<div class="widget-head">
+							<div class="widget-title">Недавно добавлены:</div>
+						</div>
+						
+						<div class="widget-body">
+							
+							<div class="recently-added-list">
+								<div class="recently-added-item">
+									<h3><a href="#">VI Международная научно-практическая конференция «Фундаментальные и прикладные научные исследования: актуальные вопросы,  достижения и инновации»</a></h3>
+									<p>30 сентября – 2 октября 2019 г.<br>срок заявок: 29 сентября</p>
+								</div>
+
+								<div class="recently-added-item">
+									<h3><a href="#">Монография «Прикладные научные исследования: современные разработки и вектор развития»</a></h3>
+									<p>30 сентября – 2 октября 2019 г.<br>срок заявок: 29 декабря</p>
+								</div>
+
+								<div class="recently-added-item">
+									<h3><a href="#">Монография «Прикладные научные исследования: современные разработки и вектор развития»</a></h3>
+									<p>30 сентября – 2 октября 2019 г.<br>срок заявок: 29 сентября</p>
+								</div>
+							</div><!--recently-added-list end here-->
+						</div>
+						<div class="widget-footer text-center">
+							<a class="btn-get-informer" href="#">Информер для сайта</a>
+						</div>
+
+					</div><!--widget end here-->
+
+					<div class="sidebar-banner banner">
+						<a href="#"><img src="img/banner/banner-3.jpg" alt="banner"></a>
+					</div>
+
+					<div class="widget">
+
+						<div class="widget-head">
+							<div class="widget-title yellow">Последние новости:</div>
+						</div>
+						
+						<div class="widget-body">
+							
+							<div class="last-news-list">
+								<div class="last-news-item">
+									<p>2 октября 2019 г</p>
+									<a href="#">Ежедневная рассылка о новых научных мероприятиях</a>
+								</div>
+
+								<div class="last-news-item">
+									<p>2 октября 2019 г</p>
+									<a href="#">Ежедневная рассылка о новых научных мероприятиях</a>
+								</div>
+
+								<div class="last-news-item">
+									<p>2 октября 2019 г</p>
+									<a href="#">Ежедневная рассылка о новых научных мероприятиях</a>
+								</div>
+
+								<div class="last-news-item">
+									<p>2 октября 2019 г</p>
+									<a href="#">Ежедневная рассылка о новых научных мероприятиях</a>
+								</div>
+
+							</div><!--recently-added-list end here-->
+						</div>
+						<div class="widget-footer text-center"></div>
+
+					</div><!--widget end here-->
+
+					<div class="sidebar-banner banner">
+						<a href="#"><img src="img/banner/banner-3.jpg" alt="banner"></a>
+					</div>
+				</aside>
+			</div>
+		</div>
+	</div><!--container end here-->
+
+
+	<footer class="site-footer footer">
+		<div class="footer-top">
+			<form action="#" method="POST">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-4">
+							<div class="footer-top-title">Не забудьте подписаться на рассылку</div>
+						</div>
+						<div class="col-lg-3">
+							<input class="inpt-2" type="text" name="" placeholder="Все разделы">
+						</div>
+						<div class="col-lg-3">
+							<input class="inpt-2" type="text" name="" placeholder="Ваш e-mail">
+						</div>
+						<div class="col-lg-2">
+							<input class="btn-subscribe" type="submit" name="">
+						</div>
+					</div>
+				</div>
+
+			</form>
+			
+		</div>
+		<div class="footer-middle">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7">
+						<h2>Open Directory scientific conferences, exhibitions and seminars</h2>
+						<div class="footer-counters">
+							<ul>
+								<li><a href="#"><img src="img/counter-1.jpg"></a></li>
+								<li><a href="#"><img src="img/counter-2.jpg"></a></li>
+							</ul>
+						</div>
+						<div class="footer-copyright">
+							<p>© konferencii.ru 2007—2020</p>
+						</div>
+					</div>
+					<div class="col-lg-5">
+						<div class="footer-nav">
+							<ul>
+								<li><a href="#">Обратная связь</a></li>
+								<li><a href="#">Правила пользования сайтом</a></li>
+							</ul>
+						</div>
+
+						<div class="footer-sn">
+							<ul>
+								<li><a href="#"><img src="img/sn-vk.png" alt="VKontakte"></a></li>
+								<li><a href="#"><img src="img/sn-f.png" alt="Facebook"></a></li>
+								<li><a href="#"><img src="img/sn-t.png" alt="Twitter"></a></li>
+								<li><a href="#"><img src="img/sn-o.png" alt="Одноклассники"></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--footer-middle end here-->
+	</footer><!--footer end here-->
+	
+
+	<script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
+	<script type="text/javascript" src="js/jquery.scrollbar.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	
+</body>
+</html>

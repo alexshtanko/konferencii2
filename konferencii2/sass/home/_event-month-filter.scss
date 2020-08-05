@@ -1,0 +1,14 @@
+.event-month-filter{
+	margin: 8px 0 32px 0;
+	li{
+		display: inline-block;
+	}
+	a{
+		font-size: 1rem; /*16*/
+		font-weight: bold;
+		line-height: 1.6875rem;	/*27*/
+		color: $color-blue;
+		border-left: 2px solid $color-blue;
+		padding-left: 15px;
+	}
+}

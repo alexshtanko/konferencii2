@@ -1,0 +1,98 @@
+.login{
+	h1{
+		font-weight: 500;
+		font-size: 1.25rem;
+		color: #464646;
+		line-height: 1.4375rem;
+	}
+}
+.login-sn{
+	text-align: center;
+	ul{
+		margin-top: 20px;
+	}
+	li{
+		display: inline-block;
+		border-radius: 45px;
+		margin-left: 20px;
+		&:first-child{
+			margin-left: 0;
+		}
+		a{
+			display: block;
+			width: 40px;
+			line-height: 40px;
+			text-align: center;
+			border-radius: 45px;
+		}
+		&.vk{
+			background: $color-blue;
+		}
+		&.f{
+			background: #175685;
+		}
+		&.t{
+			background: #06a6e9;
+		}
+		&.o{
+			background: $color-orange;
+		}
+	}
+}
+.login-sn-title{
+	margin-top: 35px;
+	font-weight: bold;
+	font-size: 1rem;
+	line-height: 2.25rem;
+}
+
+.login-form-title{
+	margin-top: 35px;
+	margin-bottom: 15px;
+	font-weight: bold;
+	font-size: 1rem;
+	line-height: 2.25rem;
+	text-align: center;
+}
+
+.login-form{
+	.form-group.login-register-forgot{
+		margin-top: 20px;
+	}
+	a{
+		font-size: .875rem;
+		text-decoration: underline;
+		&:hover{
+			text-decoration: none;
+		}
+	}
+}
+
+.login-text{
+	margin-top: 50px;
+	p{
+		font-size: .875rem;
+		color: #545454;
+		line-height: 1.5rem;
+	}
+}
+
+@media (min-width: 992px){
+	.login{
+		h1{
+			font-size: 1.5rem;
+			line-height: 1.4375rem;
+		}
+	}
+	.login-sn{
+		text-align: left;
+		li{
+			a{
+				width: 70px;
+			}
+		}
+	}
+	.login-form-title{
+		text-align: left;
+	}
+}

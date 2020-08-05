@@ -1,0 +1,104 @@
+@import "compass/reset";
+
+@import "_var";
+
+@import "_bootstrap-custom";
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+html{
+	font-size: 16px;
+}
+body{
+	background: #ffffff url('../img/header-bg.jpg') no-repeat center top;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.clear{
+	clear: both;
+}
+
+body *{
+	box-sizing: border-box;
+}
+
+h1{
+	font-size: 1.5rem;	/*24*/
+	font-weight: bold;
+	color: #1a1a1a;
+	line-height: 1.875rem;
+}
+h2{
+	font-weight: 600;
+	font-size: 1.125rem;	/*18*/
+	line-height: 1.875rem;	/*30*/
+	color: #1a1a1a;
+}
+main {
+	a{
+		color: $color-link;
+		&:hover{
+			color: $color-link-hover;
+		}
+		&:active{
+			color: $color-link-active;
+		}
+	}
+}
+p a{
+	transition: color .2s linear;
+	&:hover{
+		color: $color-link-hover !important;
+		text-decoration: none;
+	}
+}
+
+@import "form";
+
+@import "header/header";
+
+@import "header/breadcrumbs";
+
+@import "main";
+
+@import "event/event-top";
+
+@import "event/event-tab";
+
+@import "event/event-print";
+
+@import "event/event-header";
+
+@import "event/event-body";
+
+@import "event/event-file";
+
+@import "event/event-contact";
+
+@import "event/event-footer";
+
+@import "event/event-sn";
+
+@import "event/event-pagination-wrapper";
+
+@import "sidebar";
+
+@import "home/home";
+
+@import "home/event-month-filter";
+
+@import "home/home-event-list";
+
+@import "home/home-pagination";
+
+@import "login/login";
+
+@import "registration/registration";
+
+@import "widget";
+
+@import "footer/footer";
+
+@import "footer/footer-top";
+
+@import "footer/footer-middle";

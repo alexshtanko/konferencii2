@@ -1,0 +1,38 @@
+.registration{
+	h1{
+		font-weight: 500;
+		font-size: 1.5rem;
+		color: #464646;
+		line-height: 1.75rem;
+	}
+}
+.registration-text{
+	margin-top: 30px;
+	p{
+		font-size: .875rem;
+		color: #545454;
+		line-height: 1.5rem;
+	}
+}
+
+.registration-form{
+	margin-top: 40px;
+	.form-group{
+		margin-top: 20px;
+		&:first-child{
+			margin-top: 0;
+		}
+		&:last-child{
+			margin-top: 35px;
+		}
+	}
+}
+
+@media (min-width: 992px){
+	.registration{
+		h1{
+			font-size: 1.5rem;
+			line-height: 1.4375rem;
+		}
+	}
+}
