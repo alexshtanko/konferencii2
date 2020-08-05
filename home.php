@@ -18,39 +18,83 @@ get_header();
 	<div class="row">
 		<div class="col-lg-9">
 			<main id="primary" class="site-main">
-				
-				<?php
-				if ( have_posts() ) :
 
-					if ( is_home() && ! is_front_page() ) :
-						?>
-						<header>
-							<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-						</header>
-						<?php
+				<div class="row">
+					<div class="col-lg-8">
+						<div class="home-title">
+							<b>Анонсы</b> научных мероприятий
+						</div>
+					</div>
+
+					<div class="col-lg-4">
+						<div class="home-title-banner banner">
+						<a href="#" target="_blank" rel="nofollow"><img src="<?php echo bloginfo('template_url'); ?>/img/demo/banner-1.jpg" alt=""></a>
+						</div>
+					</div>
+				</div>
+
+				<div class="event-month-filter">
+					<ul>
+						<li><a href="#">Октябрь 2019</a></li>
+					</ul>
+				</div>
+
+				<div class="home-event-list">
+
+					<?php
+					if ( have_posts() ) :
+
+						if ( is_home() && ! is_front_page() ) :
+							?>
+							<header>
+								<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+							</header>
+							<?php
+						endif;
+
+						/* Start the Loop */
+						while ( have_posts() ) :
+							the_post();
+
+							/*
+							* Include the Post-Type-specific template for the content.
+							* If you want to override this in a child theme, then include a file
+							* called content-___.php (where ___ is the Post Type name) and that will be used instead.
+							*/
+							get_template_part( 'template-parts/content-conference', get_post_type() );
+
+						endwhile;
+
+						the_posts_navigation();
+
+					else :
+
+						get_template_part( 'template-parts/content', 'none' );
+
 					endif;
+					?>
 
-					/* Start the Loop */
-					while ( have_posts() ) :
-						the_post();
+				</div><!--home-event-list end here-->
 
-						/*
-						* Include the Post-Type-specific template for the content.
-						* If you want to override this in a child theme, then include a file
-						* called content-___.php (where ___ is the Post Type name) and that will be used instead.
-						*/
-						get_template_part( 'template-parts/content', get_post_type() );
+				<div class="home-event-load-more">
+					<button class="btn-load-more-event">Загрузить ещё</button>
+				</div><!--home-event-load-more end here-->
 
-					endwhile;
+				<div class="home-pagination">
+					
+						<span class="prev disable" >&nbsp;</span>
+						<span class="page-numbers inactive current">1</span>
+						<a charset="page-numbers inactive" href="#">2</a>
+						<a charset="page-numbers inactive" href="#">3</a>
+						<a charset="page-numbers inactive" href="#">4</a>
+						<span class="page-numbers inactive dots">...</span>
+						<a class="page-numbers inactive" href="#">125</a>
+						<a class="next page-numbers inactive" href="#">&nbsp;</a>
 
-					the_posts_navigation();
-
-				else :
-
-					get_template_part( 'template-parts/content', 'none' );
-
-				endif;
-				?>
+					
+				</div><!--home-pagination end here-->
+				
+				
 
 			</main><!-- #main -->
 		</div>
