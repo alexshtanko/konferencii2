@@ -1,0 +1,42 @@
+.header-sn{
+	text-align: center;
+	li{
+		margin-top: 15px;
+		margin: 15px 10px 0;
+		display: inline-block;
+		text-align: center;
+		img{
+			opacity: 1;
+			transition: opacity .2s linear;
+		}
+		&:hover{
+			img{
+				opacity: .9;
+			}
+		}
+	}
+}
+
+
+@media (min-width: 992px){
+	.header-sn{
+		text-align: right;
+		float: right;
+		li{
+			// margin-top: 15px;
+			margin: 15px 0;
+			width: 17px;
+			text-align: center;
+			display: block;
+			img{
+				opacity: 1;
+				transition: opacity .2s linear;
+			}
+			&:hover{
+				img{
+					opacity: .9;
+				}
+			}
+		}
+	}
+}

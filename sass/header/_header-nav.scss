@@ -1,0 +1,143 @@
+
+
+.get-mobile-nav{
+	position: fixed;
+	right: 5px;
+	top: 15px;
+	width: 50px;
+	height: 42px;
+	z-index: 100;
+	padding: 10px;
+	cursor: pointer;
+	span{
+		width: 30px;
+		height: 4px;
+		background: $color-orange;
+		border-radius: 2px;
+		margin-top: 5px;
+		display: block;
+		position: relative;
+		transition: all .2s linear;
+		&:first-child{
+			margin-top: 0;
+		}
+
+	}
+	&.open{
+		span{
+			background: $color-blue; 
+			&:nth-child(1){
+				@include rotate(-45deg);
+				bottom: -10px;
+			}
+			&:nth-child(2){
+				display: none;
+				
+			}
+			&:nth-child(3){
+				@include rotate(45deg);
+				top: 1px;
+			}
+		}
+	}
+}
+
+.header-banner{
+	display: none;
+}
+.mobile-nav{
+	width: 100%;
+	max-width: 100%;
+	position: fixed;
+	right: -100%;
+	top: 0;
+	bottom: 0;
+	transition: right .2s linear;
+	text-align: center;
+	background: $color-orange;
+	z-index: 99;
+	&.open{
+		right: 0;
+		left: 0;
+		text-align: center;
+	}
+	.row{
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+}
+
+.header-nav{
+	padding-top: 8px;
+	li{
+		display: inline-block;
+		width: 100%;
+		margin-top: 8px;
+		margin-bottom: 8px;
+	}
+	a{
+		font-size: 14px;
+		font-weight: bold;
+		line-height: 27px;
+		color: #444444;
+		color: $color-blue;
+		text-decoration: none;
+		position: relative;
+		display: inline-block;
+		&:after{
+			content: '';
+			width: 0;
+			margin-left: -2%;
+			height: 3px;
+			background: #2a7ebd;
+			position: absolute;
+			display: block;
+			transition: width .1s linear;
+		}
+		&:hover:after{
+			width: 104%;
+		}
+	}
+}
+
+@media (min-width: 992px){
+	.get-mobile-nav{
+		display: none;
+	}
+	.mobile-nav{
+		position: relative;
+		right: 0;
+		text-align: left;
+	    max-width: 960px;
+	    background: none;
+	    .row{
+			height: 100%;
+			flex-direction: row;
+			// display: block;
+		}
+	}
+	.header-nav{
+		li{
+			width: auto;
+			display: inline-block;
+			margin-left: (85/1920)*100%;
+			margin-top: 0;
+			margin-bottom: 0;
+			&:first-child{
+				margin-left: 0;
+			}
+		}
+	}
+	.header-banner{
+		display: block;
+	}
+}
+
+@media (min-width: 1200px){
+	.mobile-nav{
+	    max-width: 1170px;
+
+	}
+}

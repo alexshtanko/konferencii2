@@ -1,0 +1,83 @@
+.event-header{
+	margin-top: 20px;
+	margin-left: -20px;
+	background: #f8f8f8;
+	padding: 17px 20px 20px;
+	border-radius: 25px;
+	p{
+		font-size: .875rem;
+		line-height: 1.4375rem;
+		color: #101010;
+
+	}
+}
+
+.event-location{
+	margin-top: 10px;
+	p{
+		position: relative;
+		padding-left: 27px;
+		&:before{
+			content: '';
+			display: block;
+			background: url('../img/location-yellow.svg') no-repeat center top;
+			background-size: cover;
+			width: 13px;
+			height: 18px;
+			position: absolute;
+			left: 3px;
+			top: 3px;
+		}
+
+	}
+}
+.event-date{
+	margin-top: 10px;
+	p{
+		position: relative;
+		padding-left: 27px;
+		&:before{
+			content: '';
+			display: block;
+			background: url('../img/calendar-yellow.svg') no-repeat center top;
+			background-size: cover;
+			width: 17px;
+			height: 17px;
+			position: absolute;
+			left: 3px;
+			top: 3px;
+		}
+
+	}
+}
+
+.event-info{
+	margin-top: 10px;
+	span{
+		color: #626262;
+	}
+	p{
+		margin-top: 10px;
+	}
+}
+
+.event-category{
+	margin-top: 20px;
+	font-size: .75rem; 	/*12*/
+	font-weight: 500;
+	line-height: 1.4375rem; /*23*/
+	color: $color-blue;
+	p{
+		font-size: .75rem; 	/*12*/
+		font-weight: 500;
+		line-height: 1.4375rem; /*23*/
+		color: $color-blue;
+
+	}
+	a{
+		font-size: .75rem; 	/*12*/
+		font-weight: 500;
+		line-height: 1.4375rem; /*23*/
+		color: $color-blue;
+	}
+}

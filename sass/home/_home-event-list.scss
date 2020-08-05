@@ -1,0 +1,132 @@
+.home-event-list{
+	.home-event-item{
+		position: relative;
+		margin-top: 45px;
+		padding-bottom: 10px;
+		padding-left: 20px;
+		&:first-child{
+			margin-top: 0;
+		}
+		&:after{
+			content: '';
+			display: block;
+			width: 2px;
+			height: 100%;
+			background: #dadada;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+
+		&.priority{
+			&:before{
+				content: '';
+				display: block;
+				width: 18px;
+				height: 38px;
+				background: #ffffff url('../img/priority.png') no-repeat center top;
+				position: absolute;
+				left: -8px;
+				top: 0;
+				z-index: 2;
+			}
+			&:after{
+				background: $color-yellow;
+				z-index: 1;
+
+			}
+		}
+		&.status-open .home-event-item-header-location:after{
+			background: #099a46;
+			border: 3px solid #9ad5b3;
+		}
+		&.status-ends .home-event-item-header-location:after{
+			background: $color-yellow;
+			border: 3px solid #ffdb82;
+		}
+		&.status-end .home-event-item-header-location:after{
+			background: $color-red;
+			border: 3px solid #b96669;
+		}
+	}
+
+	.home-event-item-header{
+		color: $color-silver;
+		font-size: .875rem;		/*14*/
+		line-height: 1.5625rem;		/*25*/
+	}
+	.home-event-item-header-date{
+		position: relative;
+		padding-left: 25px;
+		&:before{
+			content: '';
+			display: block;
+			width: 16px;
+			height: 15px;
+			background: url('../img/event-date.png') no-repeat center top;
+			position: absolute;
+			left: 0;
+			top: 5px;
+			z-index: 2;
+		}
+	}
+	.home-event-item-header-location{
+		position: relative;
+		padding-left: 27px;
+		padding-right: 25px;
+		&:before{
+			content: '';
+			display: block;
+			width: 18px;
+			height: 19px;
+			background: url('../img/event-location.png') no-repeat center top;
+			position: absolute;
+			left: 0;
+			top: 4px;
+			z-index: 2;
+		}
+		&:after{
+			content: '';
+			display: block;
+			width: 15px;
+			height: 15px;
+			background: #099a46;
+			border: 3px solid #9ad5b3;
+			border-radius: 50px;
+			position: absolute;
+			right: 0;
+			top: 5px;
+			z-index: 2;
+		}
+	}
+	
+	.home-event-item-body{
+		margin-top: 10px;
+		h2,
+		h2 a{
+			font-weight: 600;
+			font-size: 1.125rem;	/*18*/
+			line-height: 1.875rem;	/*30*/
+			color: #1a1a1a;
+		}
+		p{
+			margin-top: 10px;
+			font-size: .875rem; 	/*14*/
+			line-height: 1.125rem;		/*25*/
+			color: $color-silver;
+		}
+	}
+
+	.home-event-item-footer{
+		margin-top: 15px;
+		p{
+			font-size: .875rem; 	/*14*/
+			line-height: 1.125rem;		/*25*/
+			color: $color-silver;
+		}
+		a{
+			color: $color-link;
+		}
+	}
+	
+}

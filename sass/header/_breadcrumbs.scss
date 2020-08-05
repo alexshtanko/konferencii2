@@ -1,0 +1,42 @@
+.breadcrumbs{
+	// width: (820/1170)*100%;
+	// float: left;
+	margin-top: 3px;
+	li{
+		display: inline-block;
+		&:before{
+			content: '';
+			width: 12px;
+			height: 8px;
+			display: inline-block;
+			background: url('../img/breadcrumbs-arrow.png') no-repeat center center;
+			margin-right: 15px;
+			margin-left: 15px;
+		}
+		&:first-child{
+			&:before{
+				display: none;
+			}
+		}
+		img{
+			display: block;
+			width: 19px;
+			height: 18px;
+			position: relative;
+			top: 2px;
+		}
+	}
+	a{
+		font-size: .875rem;
+		line-height: 1.4375rem;
+		color: #464646;
+	}
+}
+
+@media (min-width: 992px){
+	.breadcrumbs{
+		width: (820/1170)*100%;
+		float: left;
+		margin-top: 3px;
+	}
+}

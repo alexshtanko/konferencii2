@@ -1,0 +1,21 @@
+.header-search-result{
+	margin-top: 18px;
+	background: #eaecef;
+	padding: 0 14px 14px 14px;
+	border-radius: 50px;
+	padding-right: 160px;
+	position: relative;
+	min-height: 54px;
+}
+
+.header-search-result-inner{
+	width: 100%;
+	// padding-left: 15px;
+}
+.filter-reset{
+	width: 140px;
+	text-align: right;
+	position: absolute;
+	right: 14px;
+	top: 14px;
+}

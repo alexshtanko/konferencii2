@@ -1,0 +1,38 @@
+.footer-top{
+	background: $color-blue;
+	padding: 20px 0;
+	.inpt-2{
+		margin-bottom: 20px;
+	}
+}
+.footer-top-title{
+	margin-bottom: 10px;
+	font-weight: bold;
+	font-size: 1rem; 	/*16*/
+	line-height: 2.1875rem; 	/*35*/
+	color: $color-white;
+	position: relative;
+	// padding-left: 60px;
+	&:before{
+		content: '';
+		position: relative;
+		top: -4px;
+		display: inline-block;
+		// width: 45px;
+		width: 25px;
+		height: 2px;
+		background: $color-white;
+		margin-right: 10px;
+	}
+}
+
+@media (min-width: 992px){
+	.footer-top-title{
+		margin-bottom: 0;
+	}
+	.footer-top{
+		.inpt-2{
+			margin-bottom: 0;
+		}
+	}
+}

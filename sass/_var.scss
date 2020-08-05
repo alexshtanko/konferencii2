@@ -1,0 +1,22 @@
+/*Color*/
+
+$color-white: #ffffff;
+$color-yellow: #ffb806;
+$color-silver: #969696;
+$color-blue: #2a7ebd;
+$color-red: #b61d22;
+$color-orange: #fca735;
+$color-black: #000000;
+
+
+$color-link: $color-blue;
+$color-link-hover: #006bbb;
+$color-link-active: #00487d;
+
+@mixin rotate($deg) {
+	-moz-transform: rotate($deg);
+    -ms-transform: rotate($deg);
+    -webkit-transform: rotate($deg);
+    -o-transform: rotate($deg);
+    transform: rotate($deg);
+}

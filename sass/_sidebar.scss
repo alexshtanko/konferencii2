@@ -1,0 +1,13 @@
+.sidebar{
+	margin-top: 48px;
+}
+.widget + .sidebar-banner,
+.sidebar-banner + .widget{
+	margin-top: 45px;
+}
+
+.sidebar-banner{
+	img{
+		max-width: 100%;
+	}
+}

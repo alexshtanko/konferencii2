@@ -1,0 +1,33 @@
+.event-tab{
+	margin-top: 25px;
+	li{
+		display: inline-block;
+		margin-left: 18px;
+		&:first-child{
+			margin-left: 0;
+		}
+		&.active,
+		&:hover{
+			a{
+				color: $color-white;
+				background: #fca735;
+				border-color: #fca735;
+			}
+		}
+	}
+	a{
+		font-size: .75rem;
+		color: #828282;
+		line-height: 1.375rem;
+		text-decoration: none;
+		text-align: center;
+		display: inline-block;
+		width: 100px;
+		border: 1px solid #828282;
+		border-radius: 25px;
+		transition: all .2s linear;
+		&:hover{
+			text-decoration: none;
+		}
+	}
+}
