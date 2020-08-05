@@ -2227,8 +2227,9 @@ p a:hover {
   max-width: 100%;
 }
 
-/* line 2, ../sass/home/_home.scss */
-.home-title h1 {
+/* line 1, ../sass/home/_home.scss */
+.home-title {
+  font-weight: bold;
   font-size: 1.5rem;
   font-size: 24px;
   line-height: 2rem;
@@ -2236,37 +2237,49 @@ p a:hover {
   text-transform: uppercase;
 }
 /* line 8, ../sass/home/_home.scss */
+.home-title b {
+  color: #2a7ebd;
+}
+/* line 11, ../sass/home/_home.scss */
+.home-title h1 {
+  font-size: 1.5rem;
+  font-size: 24px;
+  line-height: 2rem;
+  color: #575757;
+  text-transform: uppercase;
+}
+/* line 17, ../sass/home/_home.scss */
 .home-title h1 span {
   font-weight: bold;
   color: #2a7ebd;
 }
 
-/* line 15, ../sass/home/_home.scss */
+/* line 24, ../sass/home/_home.scss */
 .home-event-load-more {
   margin-top: 50px;
   text-align: center;
 }
 
-/* line 20, ../sass/home/_home.scss */
+/* line 29, ../sass/home/_home.scss */
 .home-title-banner {
   margin: 15px 0;
 }
-/* line 22, ../sass/home/_home.scss */
+/* line 31, ../sass/home/_home.scss */
 .home-title-banner img {
   max-width: 100%;
 }
 
-/* line 26, ../sass/home/_home.scss */
+/* line 35, ../sass/home/_home.scss */
 .home-event-banner {
   margin-top: 45px;
 }
-/* line 28, ../sass/home/_home.scss */
+/* line 37, ../sass/home/_home.scss */
 .home-event-banner img {
   max-width: 100%;
 }
 
 @media (min-width: 992px) {
-  /* line 36, ../sass/home/_home.scss */
+  /* line 45, ../sass/home/_home.scss */
   .home-title h1 {
     font-size: 1.5rem;
     font-size: 24px;
@@ -2274,13 +2287,13 @@ p a:hover {
     color: #575757;
     text-transform: uppercase;
   }
-  /* line 42, ../sass/home/_home.scss */
+  /* line 51, ../sass/home/_home.scss */
   .home-title h1 span {
     font-weight: bold;
     color: #2a7ebd;
   }
 
-  /* line 48, ../sass/home/_home.scss */
+  /* line 57, ../sass/home/_home.scss */
   .home-title-banner {
     margin: 0;
     top: -10px;
