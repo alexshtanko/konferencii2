@@ -40,12 +40,14 @@
 				<div class="row">
 					<div class="col-lg-6 mobile-header-nav">
 						<nav class="header-nav">
-							<ul>
-								<li><a href="#">Информер</a></li>
-								<li><a href="#">Рассылка</a></li>
-								<li><a href="#">Реклама</a></li>
-								<li><a href="#">Обратная связь</a></li>
-							</ul>
+							<?php
+								wp_nav_menu(
+									array(
+										'theme_location' => 'menu-1',
+										'menu_id'        => 'primary-menu',
+									)
+								);
+							?>
 						</nav>
 					</div>
 					<div class="col-lg-3">
