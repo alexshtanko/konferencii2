@@ -53,10 +53,13 @@
 					</div>
 					<div class="col-lg-5">
 						<div class="footer-nav">
-							<ul>
-								<li><a href="#">Обратная связь</a></li>
-								<li><a href="#">Правила пользования сайтом</a></li>
-							</ul>
+							<?php
+								wp_nav_menu(
+									array(
+										'menu'        => 'footer nav',
+									)
+								);
+							?>
 						</div>
 
 						<div class="footer-sn">
