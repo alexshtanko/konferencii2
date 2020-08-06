@@ -56,7 +56,7 @@
 							<?php
 								wp_nav_menu(
 									array(
-										'menu'        => 'footer nav',
+										'menu' => 'footer nav',
 									)
 								);
 							?>
