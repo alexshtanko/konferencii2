@@ -224,3 +224,86 @@ function my_custom_post(){
 	) );
 }
 
+// удаление таксономии
+add_action( 'wp', 'unregister_genre_taxonomy' );
+function unregister_genre_taxonomy(){
+	// отменяем таксу только на отдельных страницах
+	if( ! is_singular() ) return;
+
+	unregister_taxonomy('event');
+}
+
+// хук, через который подключается функция
+// регистрирующая новые таксономии (create_conference_taxonomies)
+add_action( 'init', 'create_conference_taxonomies' );
+
+// функция, создающая 2 новые таксономии "genres" и "writers" для постов типа "book"
+function create_conference_taxonomies(){
+
+	register_taxonomy('event', 'conference',array(
+		'hierarchical'  => false,
+		'labels'        => array(
+			'name'                        => _x( 'Типы мероприятий', 'taxonomy general name' ),
+			'singular_name'               => _x( 'Тип мероприятия', 'taxonomy singular name' ),
+			'search_items'                =>  __( 'Поиск Типа мероприятия' ),
+			'popular_items'               => __( 'Популярные Типы мероприятий' ),
+			'all_items'                   => __( 'Все Типы мероприятий' ),
+			'edit_item'                   => __( 'Редактировать Тип мероприятия' ),
+			'update_item'                 => __( 'Обновить Тип мероприятия' ),
+			'add_new_item'                => __( 'Добавить новый Тип мероприятия' ),
+			'new_item_name'               => __( 'Новое названия Типа мероприятия' ),
+			'add_or_remove_items'         => __( 'Добавить или удалить Тип мероприятия' ),
+			'choose_from_most_used'       => __( 'Выберите из наиболее часто используемых Типов мероприятия' ),
+			'menu_name'                   => __( 'Типы мероприятия' ),
+			
+		),
+		'show_ui'       => true,
+		'query_var'     => true,
+		'meta_box_cb' 	=> 'post_categories_meta_box',
+		//'rewrite'       => array( 'slug' => 'the_writer' ), // свой слаг в URL
+	));
+
+	register_taxonomy('topic', 'conference',array(
+		'hierarchical'  => false,
+		'labels'        => array(
+			'name'                        => _x( 'Тематика мероприятий', 'taxonomy general name' ),
+			'singular_name'               => _x( 'Тематика мероприятия', 'taxonomy singular name' ),
+			'search_items'                =>  __( 'Поиск Тематик мероприятия' ),
+			'popular_items'               => __( 'Популярные Тематик мероприятий' ),
+			'all_items'                   => __( 'Все Тематики мероприятий' ),
+			'edit_item'                   => __( 'Редактировать Тематику мероприятия' ),
+			'update_item'                 => __( 'Обновить Тематику мероприятия' ),
+			'add_new_item'                => __( 'Добавить новую Тематику мероприятия' ),
+			'new_item_name'               => __( 'Новое названия Тематики мероприятия' ),
+			'add_or_remove_items'         => __( 'Добавить или удалить Тематику мероприятия' ),
+			'choose_from_most_used'       => __( 'Выберите из наиболее часто используемых Тематик мероприятия' ),
+			'menu_name'                   => __( 'Тематики мероприятия' ),
+			
+		),
+		'show_ui'       => true,
+		'query_var'     => true,
+		'meta_box_cb' 	=> 'post_categories_meta_box',
+		//'rewrite'       => array( 'slug' => 'the_writer' ), // свой слаг в URL
+	));
+
+	// Добавляем древовидную таксономию 'genre' (как категории)
+	register_taxonomy('ref-base', array('conference'), array(
+		'hierarchical'  => true,
+		'labels'        => array(
+			'name'              => _x( 'Наукометрические базы данных', 'taxonomy general name' ),
+			'singular_name'     => _x( 'Наукометрическая база данных', 'taxonomy singular name' ),
+			'search_items'      =>  __( 'Найти Наукометрическую базу данных' ),
+			'all_items'         => __( 'Все Наукометрические базы данных' ),
+			'parent_item'       => __( 'Родительские базы Наукометрические данный' ),
+			'parent_item_colon' => __( 'Родительские базы Наукометрические данный:' ),
+			'edit_item'         => __( 'Редактировать Наукометрическую базу данных' ),
+			'update_item'       => __( 'Обновить Наукометрическую базу данных' ),
+			'add_new_item'      => __( 'Добавить новую Наукометрическую базу данных' ),
+			'new_item_name'     => __( 'Новая Наукометрическая база данных' ),
+			'menu_name'         => __( 'Наукометрические базы данных' ),
+		),
+		'show_ui'       => true,
+		'query_var'     => true,
+		//'rewrite'       => array( 'slug' => 'the_genre' ), // свой слаг в URL
+	));
+}
