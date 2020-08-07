@@ -307,3 +307,15 @@ function create_conference_taxonomies(){
 		//'rewrite'       => array( 'slug' => 'the_genre' ), // свой слаг в URL
 	));
 }
+
+
+//Вывод постов на главной
+function home_custom_post( $query ) {
+
+    if ( $query->is_home() && $query->is_main_query() || $query->is_search ) {
+
+        $query->set( 'post_type', 'conference' );
+
+    }
+}
+add_action( 'pre_get_posts', 'home_custom_post', 1 );
