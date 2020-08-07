@@ -130,14 +130,7 @@
 				<div class="container">
 					<div class="rov">
 						<div class="col-lg-12">
-							<div class="header-search-form-inner">
-							<?php // get_search_form(); ?>
-								<div class="header-close-search" id="headerCloseSearch"></div>
-								<form action="#">
-									<input class="inpt-header-search" type="text" name="">
-									<input class="btn-header-search" type="submit" name="" value="">
-								</form>
-							</div>
+							<?php get_search_form(); ?>
 						</div>
 					</div>
 				</div>
