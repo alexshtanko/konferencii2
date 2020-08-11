@@ -191,12 +191,105 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 
-//
+//Форма проведения мероприятия
 $event_aplication_form = array(
 	1 => 'очная',
 	2 => 'заочная',
 	3 => 'on-line',
 );
+
+//Russian date:
+function rus_date() {
+    $translate = array(
+    "am" => "дп",
+    "pm" => "пп",
+    "AM" => "ДП",
+    "PM" => "ПП",
+    "Monday" => "Понедельник",
+    "Mon" => "Пн",
+    "Tuesday" => "Вторник",
+    "Tue" => "Вт",
+    "Wednesday" => "Среда",
+    "Wed" => "Ср",
+    "Thursday" => "Четверг",
+    "Thu" => "Чт",
+    "Friday" => "Пятница",
+    "Fri" => "Пт",
+    "Saturday" => "Суббота",
+    "Sat" => "Сб",
+    "Sunday" => "Воскресенье",
+    "Sun" => "Вс",
+    "January" => "Января",
+    "Jan" => "Янв",
+    "February" => "Февраля",
+    "Feb" => "Фев",
+    "March" => "Марта",
+    "Mar" => "Мар",
+    "April" => "Апреля",
+    "Apr" => "Апр",
+    "May" => "Мая",
+    "May" => "Мая",
+    "June" => "Июня",
+    "Jun" => "Июн",
+    "July" => "Июля",
+    "Jul" => "Июл",
+    "August" => "Августа",
+    "Aug" => "Авг",
+    "September" => "Сентября",
+    "Sep" => "Сен",
+    "October" => "Октября",
+    "Oct" => "Окт",
+    "November" => "Ноября",
+    "Nov" => "Ноя",
+    "December" => "Декабря",
+    "Dec" => "Дек",
+    "st" => "ое",
+    "nd" => "ое",
+    "rd" => "е",
+    "th" => "ое"
+    );
+
+    if (func_num_args() > 1) {
+        $timestamp = func_get_arg(1);
+        return strtr(date(func_get_arg(0), $timestamp), $translate);
+    } else {
+        return strtr(date(func_get_arg(0)), $translate);
+    }
+}
+
+//Расчет статуса приема заявок:
+//$date_start - Период подачи заявок от
+//$date_end - Период подачи заявок до
+//
+//Возвращает Css КЛАСС
+function event_aplication_status( $date_start, $date_end ){
+
+    $cur_date = strtotime( "0:00",time() );
+
+    $date_start = strtotime( $date_start );
+
+    //259200 -3 day in second
+    $ends = 259200;
+
+    $date_end = strtotime( $date_end );
+
+    $status = '';
+
+    if ( $cur_date >= $date_end ){
+		$status = 'status-end';
+		echo '1';
+    }
+    if ( $cur_date >= $date_start && $cur_date <= $date_end ){
+		$status = 'status-ends';
+		echo '2';
+    }
+    if( $cur_date >= $date_start && $cur_date <= ( $date_end - $ends) ){
+		$status = 'status-open';
+		echo '3';
+    }
+
+    return $status;
+}
 
 //Добавляем тип записи "Конференция"
 add_action('init', 'my_custom_post');
