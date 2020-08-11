@@ -190,6 +190,14 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+//
+$event_aplication_form = array(
+	1 => 'очная',
+	2 => 'заочная',
+	3 => 'on-line',
+);
+
 //Добавляем тип записи "Конференция"
 add_action('init', 'my_custom_post');
 function my_custom_post(){
@@ -337,4 +345,74 @@ function my_navigation_template( $template, $class ){
 		<div class="nav-links">%3$s</div>
 	</nav>    
 	';
+}
+
+
+//Обновляет поля при Создании/Обновлении "Мероприятия"
+add_action('save_post_conference','save_post_callback');
+function save_post_callback( $post_id ){
+	
+	global $post;
+
+    // если это автосохранение ничего не делаем
+    if ( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE )
+		return;
+
+	
+	//Берем данные из POST массива
+	$events_data = $_POST['tax_input']['event'];
+	$event_string = '';
+
+	foreach( $events_data as $event_item ){
+		
+		if( $event_item != 0 ){
+			//Получаем актуальный термин таксономии
+			$event =  get_term_by( 'id', $event_item, 'event' );
+			//Создаём строку актуальных терминов
+			$event_string .= '<a href="' . $event->slug . '">'. $event->name .'</a>, ';
+
+		}
+		
+	}
+
+	$event_topics_data = $_POST['tax_input']['topic'];
+	$event_topics_string = '';
+
+	foreach( $event_topics_data as $event_topic ){
+		
+		if( $event_topic != 0 ){
+			//Получаем актуальный термин таксономии
+			$topic =  get_term_by( 'id', $event_topic, 'topic' );
+			//Создаём строку актуальных терминов
+			$event_topics_string .= $topic->name .', ';
+
+		}
+		
+	}
+
+	$event_ref_base_data = $_POST['tax_input']['ref-base'];
+	$event_ref_base_string = '';
+
+	foreach( $event_ref_base_data as $event_ref_base ){
+		
+		if( $event_ref_base != 0 ){
+			//Получаем актуальный термин таксономии
+			$ref_base =  get_term_by( 'id', $event_ref_base, 'ref-base' );
+			//Создаём строку актуальных терминов
+			$event_ref_base_string .= '<a href="' . $ref_base->slug . '">'. $ref_base->name .'</a>, ';
+
+		}
+		
+	}
+
+	//Убераем завятую в последнем значении
+	$event_string = substr( $event_string, 0, -2);
+	$event_topics_string = substr( $event_topics_string, 0, -2);
+	$event_ref_base_string = substr( $event_ref_base_string, 0, -2);
+	
+	//Передаем новые значения в POST массив для сохранения
+	$_POST['acf']['field_5f31267650b5c'] = $event_string;
+	$_POST['acf']['field_5f3126b750b5d'] = $event_topics_string;
+	$_POST['acf']['field_5f3126ea50b5e'] = $event_ref_base_string;
+
 }
