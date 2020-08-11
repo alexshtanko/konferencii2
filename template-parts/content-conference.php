@@ -9,8 +9,12 @@
 
 ?>
 <?php
+global $event_aplication_form;
 $post_meta = get_post_meta( $post->ID );
+
+echo '<pre>';
 var_dump( $post_meta );
+echo '</pre>';
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'home-event-item priority status-open' ); ?> >
 
@@ -42,14 +46,9 @@ var_dump( $post_meta );
     </div>
 
     <div class="home-event-item-footer">
-            <?php
+    
+        <p><?php echo $post_meta['event_type_string'][0] .', '. $post_meta['event_data_base_string'][0] . ' · ' . $event_aplication_form[$post_meta['event_aplication_form'][0]] . ' · ' . $post_meta['event_topic_string'][0]; ?></p>
 
-// $conf_cat = wp_get_object_terms( $post->ID, array( 'event' ), array('orderby' => 'name') );
-
-// var_dump($conf_cat);
-            
-            ?>
-        <p><a href="#">Конференции</a>, <a href="#">РИНЦ</a>, <a href="#">Scopus</a> · Очная, Заочная, On-line · Естественные науки, Молодые ученые, Педагогика, Экономика, Управление, Финансы, Юридические науки</p>
     </div>
 
 </article><!--home-event-item end here-->
