@@ -277,15 +277,12 @@ function event_aplication_status( $date_start, $date_end ){
 
     if ( $cur_date >= $date_end ){
 		$status = 'status-end';
-		echo '1';
     }
     if ( $cur_date >= $date_start && $cur_date <= $date_end ){
 		$status = 'status-ends';
-		echo '2';
     }
     if( $cur_date >= $date_start && $cur_date <= ( $date_end - $ends) ){
 		$status = 'status-open';
-		echo '3';
     }
 
     return $status;
