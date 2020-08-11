@@ -9,20 +9,22 @@
 
 ?>
 <?php
+
 global $event_aplication_form;
+
 $post_meta = get_post_meta( $post->ID );
 
-echo '<pre>';
-var_dump( $post_meta );
-echo '</pre>';
+//получаем класс статуса приёма заявок
+$event_aplication_status = event_aplication_status( $post_meta['event_aplication_period_start'][0], $post_meta['event_aplication_period_end'][0] );
+
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'home-event-item priority status-open' ); ?> >
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'home-event-item priority ' . $event_aplication_status ); ?> >
 
     <div class="home-event-item-header">
         <div class="row">
             <div class="col-lg-8">
                 <div class="home-event-item-header-date">
-                    30 сентября – 2 октября 2019 г., срок заявок: 29 сентября 2019 г.
+                    <?php echo rus_date("d F", strtotime( $post_meta['event_period_start'][0] ) ) . ' - ' . rus_date("d F Y", strtotime( $post_meta['event_period_end'][0] ) ) . ' г., срок заявок: ' . rus_date("d F", strtotime( $post_meta['event_aplication_period_start'][0] ) ) . ' - ' . rus_date("d F Y", strtotime( $post_meta['event_aplication_period_end'][0] ) ) . ' г.' ?>
                 </div>
             </div>
             <div class="col-lg-4">
@@ -46,7 +48,7 @@ echo '</pre>';
     </div>
 
     <div class="home-event-item-footer">
-    
+
         <p><?php echo $post_meta['event_type_string'][0] .', '. $post_meta['event_data_base_string'][0] . ' · ' . $event_aplication_form[$post_meta['event_aplication_form'][0]] . ' · ' . $post_meta['event_topic_string'][0]; ?></p>
 
     </div>
