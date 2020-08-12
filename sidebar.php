@@ -7,9 +7,9 @@
  * @package konferencii2
  */
 
-if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-	return;
-}
+// if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+// 	return;
+// }
 ?>
 
 <aside id="secondary" class="widget-area sidebar">
