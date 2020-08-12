@@ -136,6 +136,18 @@ function konferencii2_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Баннер в виджете "Последние новости"', 'konferencii2' ),
+			'id'            => 'latest-news',
+			'description'   => esc_html__( 'Add widgets here.', 'konferencii2' ),
+			'before_widget' => '<section id="%1$s" class="%2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '',
+			'after_title'   => '',
+		)
+	);
 }
 add_action( 'widgets_init', 'konferencii2_widgets_init' );
 
