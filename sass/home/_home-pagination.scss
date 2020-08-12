@@ -1,6 +1,9 @@
 .home-pagination{
 	text-align: center;
-	padding-top: 50px;
+	padding-top: 42px;
+	.nav-links{
+		width: 100%;
+	}
 	a,
 	span{
 		width: 28px;
@@ -27,6 +30,7 @@
 		margin-right: 30px;
 		color: $color-white;
 		position: relative;
+		top: 8px;
 		&:before{
 			content: '';
 			display: block;
@@ -55,6 +59,7 @@
 		margin-left: 30px;
 		color: $color-white;
 		position: relative;
+		top: 8px;
 		&:before{
 			content: '';
 			display: block;

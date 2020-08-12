@@ -63,13 +63,7 @@ get_header();
 							*/
 							get_template_part( 'template-parts/content', 'conference' );
 
-						endwhile;
-
-						the_posts_pagination( array(
-							'mid_size' => 2,
-							'prev_text'    => __(''),
-							'next_text'    => __(''),
-						) ); 
+						endwhile;	
 
 					else :
 
@@ -85,20 +79,17 @@ get_header();
 				</div><!--home-event-load-more end here-->
 
 				<div class="home-pagination">
-					
-						<span class="prev disable" >&nbsp;</span>
-						<span class="page-numbers inactive current">1</span>
-						<a charset="page-numbers inactive" href="#">2</a>
-						<a charset="page-numbers inactive" href="#">3</a>
-						<a charset="page-numbers inactive" href="#">4</a>
-						<span class="page-numbers inactive dots">...</span>
-						<a class="page-numbers inactive" href="#">125</a>
-						<a class="next page-numbers inactive" href="#">&nbsp;</a>
+					<?php
 
+						the_posts_pagination( array(
+							'mid_size' => 1,
+							'end_size' => 5,
+							'prev_text'    => __(''),
+							'next_text'    => __(''),
+						) ); 
 					
-				</div><!--home-pagination end here-->
-				
-				
+					?>
+				</div><!--home-pagination end here-->				
 
 			</main><!-- #main -->
 		</div>

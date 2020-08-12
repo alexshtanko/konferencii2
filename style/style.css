@@ -2473,9 +2473,13 @@ p a:hover {
 /* line 1, ../sass/home/_home-pagination.scss */
 .home-pagination {
   text-align: center;
-  padding-top: 50px;
+  padding-top: 42px;
 }
 /* line 4, ../sass/home/_home-pagination.scss */
+.home-pagination .nav-links {
+  width: 100%;
+}
+/* line 7, ../sass/home/_home-pagination.scss */
 .home-pagination a,
 .home-pagination span {
   width: 28px;
@@ -2491,24 +2495,25 @@ p a:hover {
   border: 1px solid #ffffff;
   color: #bebebe;
 }
-/* line 16, ../sass/home/_home-pagination.scss */
+/* line 19, ../sass/home/_home-pagination.scss */
 .home-pagination a:hover,
 .home-pagination span:hover {
   text-decoration: none;
 }
-/* line 21, ../sass/home/_home-pagination.scss */
+/* line 24, ../sass/home/_home-pagination.scss */
 .home-pagination .current {
   color: #ffb806;
   border: 1px solid #ffb806;
 }
-/* line 25, ../sass/home/_home-pagination.scss */
+/* line 28, ../sass/home/_home-pagination.scss */
 .home-pagination .prev {
   background: #2a7ebd;
   margin-right: 30px;
   color: #ffffff;
   position: relative;
+  top: 8px;
 }
-/* line 30, ../sass/home/_home-pagination.scss */
+/* line 34, ../sass/home/_home-pagination.scss */
 .home-pagination .prev:before {
   content: '';
   display: block;
@@ -2524,7 +2529,7 @@ p a:hover {
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-/* line 41, ../sass/home/_home-pagination.scss */
+/* line 45, ../sass/home/_home-pagination.scss */
 .home-pagination .prev:after {
   content: '';
   display: block;
@@ -2540,14 +2545,15 @@ p a:hover {
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
-/* line 53, ../sass/home/_home-pagination.scss */
+/* line 57, ../sass/home/_home-pagination.scss */
 .home-pagination .next {
   background: #2a7ebd;
   margin-left: 30px;
   color: #ffffff;
   position: relative;
+  top: 8px;
 }
-/* line 58, ../sass/home/_home-pagination.scss */
+/* line 63, ../sass/home/_home-pagination.scss */
 .home-pagination .next:before {
   content: '';
   display: block;
@@ -2563,7 +2569,7 @@ p a:hover {
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
-/* line 69, ../sass/home/_home-pagination.scss */
+/* line 74, ../sass/home/_home-pagination.scss */
 .home-pagination .next:after {
   content: '';
   display: block;
@@ -2579,12 +2585,12 @@ p a:hover {
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-/* line 81, ../sass/home/_home-pagination.scss */
+/* line 86, ../sass/home/_home-pagination.scss */
 .home-pagination .prev.disable,
 .home-pagination .next.disable {
   background: #e1e1e1;
 }
-/* line 84, ../sass/home/_home-pagination.scss */
+/* line 89, ../sass/home/_home-pagination.scss */
 .home-pagination .prev.disable:before, .home-pagination .prev.disable:after,
 .home-pagination .next.disable:before,
 .home-pagination .next.disable:after {
