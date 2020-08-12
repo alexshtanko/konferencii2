@@ -58,6 +58,7 @@
 	.home-event-item-header-date{
 		position: relative;
 		padding-left: 25px;
+		text-transform: lowercase;
 		&:before{
 			content: '';
 			display: block;

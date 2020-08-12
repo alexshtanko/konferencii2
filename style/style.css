@@ -2385,8 +2385,9 @@ p a:hover {
 .home-event-list .home-event-item-header-date {
   position: relative;
   padding-left: 25px;
+  text-transform: lowercase;
 }
-/* line 61, ../sass/home/_home-event-list.scss */
+/* line 62, ../sass/home/_home-event-list.scss */
 .home-event-list .home-event-item-header-date:before {
   content: '';
   display: block;
@@ -2398,13 +2399,13 @@ p a:hover {
   top: 5px;
   z-index: 2;
 }
-/* line 73, ../sass/home/_home-event-list.scss */
+/* line 74, ../sass/home/_home-event-list.scss */
 .home-event-list .home-event-item-header-location {
   position: relative;
   padding-left: 27px;
   padding-right: 25px;
 }
-/* line 77, ../sass/home/_home-event-list.scss */
+/* line 78, ../sass/home/_home-event-list.scss */
 .home-event-list .home-event-item-header-location:before {
   content: '';
   display: block;
@@ -2416,7 +2417,7 @@ p a:hover {
   top: 4px;
   z-index: 2;
 }
-/* line 88, ../sass/home/_home-event-list.scss */
+/* line 89, ../sass/home/_home-event-list.scss */
 .home-event-list .home-event-item-header-location:after {
   content: '';
   display: block;
@@ -2430,11 +2431,11 @@ p a:hover {
   top: 5px;
   z-index: 2;
 }
-/* line 103, ../sass/home/_home-event-list.scss */
+/* line 104, ../sass/home/_home-event-list.scss */
 .home-event-list .home-event-item-body {
   margin-top: 10px;
 }
-/* line 105, ../sass/home/_home-event-list.scss */
+/* line 106, ../sass/home/_home-event-list.scss */
 .home-event-list .home-event-item-body h2,
 .home-event-list .home-event-item-body h2 a {
   font-weight: 600;
@@ -2444,7 +2445,7 @@ p a:hover {
   /*30*/
   color: #1a1a1a;
 }
-/* line 112, ../sass/home/_home-event-list.scss */
+/* line 113, ../sass/home/_home-event-list.scss */
 .home-event-list .home-event-item-body p {
   margin-top: 10px;
   font-size: .875rem;
@@ -2453,11 +2454,11 @@ p a:hover {
   /*25*/
   color: #969696;
 }
-/* line 120, ../sass/home/_home-event-list.scss */
+/* line 121, ../sass/home/_home-event-list.scss */
 .home-event-list .home-event-item-footer {
   margin-top: 15px;
 }
-/* line 122, ../sass/home/_home-event-list.scss */
+/* line 123, ../sass/home/_home-event-list.scss */
 .home-event-list .home-event-item-footer p {
   font-size: .875rem;
   /*14*/
@@ -2465,7 +2466,7 @@ p a:hover {
   /*25*/
   color: #969696;
 }
-/* line 127, ../sass/home/_home-event-list.scss */
+/* line 128, ../sass/home/_home-event-list.scss */
 .home-event-list .home-event-item-footer a {
   color: #2a7ebd;
 }
@@ -2785,18 +2786,19 @@ p a:hover {
   line-height: 1.5rem;
   /*24*/
   color: #969696;
+  text-transform: lowercase;
 }
-/* line 23, ../sass/_widget.scss */
+/* line 24, ../sass/_widget.scss */
 .widget + .widget {
   margin-top: 45px;
 }
 
-/* line 27, ../sass/_widget.scss */
+/* line 28, ../sass/_widget.scss */
 .widget-body {
   margin-top: 30px;
 }
 
-/* line 30, ../sass/_widget.scss */
+/* line 31, ../sass/_widget.scss */
 .widget-title {
   font-weight: bold;
   font-size: 1rem;
@@ -2806,38 +2808,38 @@ p a:hover {
   text-transform: uppercase;
   color: #2a7ebd;
 }
-/* line 36, ../sass/_widget.scss */
+/* line 37, ../sass/_widget.scss */
 .widget-title.blue {
   color: #2a7ebd;
 }
-/* line 39, ../sass/_widget.scss */
+/* line 40, ../sass/_widget.scss */
 .widget-title.yellow {
   color: #ffb806;
 }
 
-/* line 49, ../sass/_widget.scss */
+/* line 50, ../sass/_widget.scss */
 .recently-added-item {
   margin-top: 20px;
 }
-/* line 51, ../sass/_widget.scss */
+/* line 52, ../sass/_widget.scss */
 .recently-added-item:first-child {
   margin-top: 0;
 }
 
-/* line 56, ../sass/_widget.scss */
+/* line 57, ../sass/_widget.scss */
 .last-news-list {
   padding-bottom: 10px;
 }
 
-/* line 60, ../sass/_widget.scss */
+/* line 61, ../sass/_widget.scss */
 .last-news-item {
   margin-top: 20px;
 }
-/* line 62, ../sass/_widget.scss */
+/* line 63, ../sass/_widget.scss */
 .last-news-item:first-child {
   margin-top: 0;
 }
-/* line 65, ../sass/_widget.scss */
+/* line 66, ../sass/_widget.scss */
 .last-news-item a {
   color: #242424;
   font-size: .875rem;
@@ -2847,25 +2849,25 @@ p a:hover {
   text-decoration: underline;
   transform: color .2s linear;
 }
-/* line 71, ../sass/_widget.scss */
+/* line 72, ../sass/_widget.scss */
 .last-news-item a:hover {
   color: #000000;
 }
 
-/* line 78, ../sass/_widget.scss */
+/* line 79, ../sass/_widget.scss */
 .recoment-event-list p {
   margin-top: 0;
   margin-bottom: 5px;
 }
-/* line 82, ../sass/_widget.scss */
+/* line 83, ../sass/_widget.scss */
 .recoment-event-list .recoment-event-item {
   margin-top: 20px;
 }
-/* line 84, ../sass/_widget.scss */
+/* line 85, ../sass/_widget.scss */
 .recoment-event-list .recoment-event-item:first-child {
   margin-top: 0;
 }
-/* line 88, ../sass/_widget.scss */
+/* line 89, ../sass/_widget.scss */
 .recoment-event-list h3,
 .recoment-event-list h3 a {
   font-weight: bold;
@@ -2877,7 +2879,7 @@ p a:hover {
   transition: color .2s linear;
   text-decoration: underline;
 }
-/* line 96, ../sass/_widget.scss */
+/* line 97, ../sass/_widget.scss */
 .recoment-event-list h3:hover,
 .recoment-event-list h3 a:hover {
   text-decoration: none;
