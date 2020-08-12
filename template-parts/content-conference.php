@@ -14,11 +14,15 @@ global $event_aplication_form;
 
 $post_meta = get_post_meta( $post->ID );
 
+$event_priority_class = '';
+if( $post_meta['event_priority'][0] > 0 ){
+    $event_priority_class = 'priority';
+}
 //получаем класс статуса приёма заявок
 $event_aplication_status = event_aplication_status( $post_meta['event_aplication_period_start'][0], $post_meta['event_aplication_period_end'][0] );
 
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'home-event-item priority ' . $event_aplication_status ); ?> >
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'home-event-item '. $event_priority_class . ' ' . $event_aplication_status ); ?> >
 
     <div class="home-event-item-header">
         <div class="row">
