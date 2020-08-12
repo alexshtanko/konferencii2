@@ -57,8 +57,12 @@
 					<div class="col-lg-3 mobile-login">
 						<div class="header-login">
 							<ul>
-								<li><a href="#">Вход</a></li>
-								<li><a href="#">Регистрация</a></li>
+								<?php if ( is_user_logged_in() ) : ?>
+									<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>profile">Личный кабинет</a></li>
+								<?php else : ?>
+									<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>login">Вход</a></li>
+									<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>register">Регистрация</a></li>
+								<?php endif; ?>
 							</ul>
 						</div>
 					</div>
