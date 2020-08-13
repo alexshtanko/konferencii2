@@ -148,6 +148,18 @@ function konferencii2_widgets_init() {
 			'after_title'   => '',
 		)
 	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Баннер на странице мероприятия', 'konferencii2' ),
+			'id'            => 'single-conference-banner',
+			'description'   => esc_html__( 'Add widgets here.', 'konferencii2' ),
+			'before_widget' => '<section id="%1$s" class="%2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '',
+			'after_title'   => '',
+		)
+	);
 }
 add_action( 'widgets_init', 'konferencii2_widgets_init' );
 
@@ -486,7 +498,7 @@ function save_post_callback( $post_id ){
 			//Получаем актуальный термин таксономии
 			$topic =  get_term_by( 'id', $event_topic, 'topic' );
 			//Создаём строку актуальных терминов
-			$event_topics_string .= $topic->name .', ';
+			$event_topics_string .= '<a href="' . $topic->slug . '">'. $topic->name .'</a>, ';
 
 		}
 		
