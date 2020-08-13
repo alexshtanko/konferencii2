@@ -2101,6 +2101,7 @@ p a:hover {
   font-weight: bold;
   font-size: 1rem;
   color: #767676;
+  text-transform: lowercase;
 }
 
 /* line 1, ../sass/event/_event-sn.scss */

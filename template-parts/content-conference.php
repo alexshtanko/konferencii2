@@ -30,7 +30,7 @@ $event_aplication_status = event_aplication_status( $post_meta['event_aplication
         <div class="row">
             <div class="col-lg-8">
                 <div class="home-event-item-header-date">
-                    <?php echo rus_date("d F", strtotime( $post_meta['event_period_start'][0] ) ) . ' - ' . rus_date("d F Y", strtotime( $post_meta['event_period_end'][0] ) ) . ' г., срок заявок: ' . rus_date("d F", strtotime( $post_meta['event_aplication_period_start'][0] ) ) . ' - ' . rus_date("d F Y", strtotime( $post_meta['event_aplication_period_end'][0] ) ) . ' г.' ?>
+                    <?php echo rus_date("j F", strtotime( $post_meta['event_period_start'][0] ) ) . ' - ' . rus_date("j F Y", strtotime( $post_meta['event_period_end'][0] ) ) . ' г., срок заявок: ' . rus_date("j F", strtotime( $post_meta['event_aplication_period_start'][0] ) ) . ' - ' . rus_date("j F Y", strtotime( $post_meta['event_aplication_period_end'][0] ) ) . ' г.' ?>
                 </div>
             </div>
             <div class="col-lg-4">
