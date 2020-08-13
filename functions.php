@@ -347,7 +347,7 @@ function unregister_genre_taxonomy(){
 // регистрирующая новые таксономии (create_conference_taxonomies)
 add_action( 'init', 'create_conference_taxonomies' );
 
-// функция, создающая 2 новые таксономии "genres" и "writers" для постов типа "book"
+
 function create_conference_taxonomies(){
 
 	register_taxonomy('event', 'conference',array(
