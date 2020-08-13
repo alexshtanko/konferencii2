@@ -58,10 +58,10 @@
 						<div class="header-login">
 							<ul>
 								<?php if ( is_user_logged_in() ) : ?>
-									<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>profile">Личный кабинет</a></li>
+									<li><a href="<?php echo esc_url( home_url( '/profile' ) ); ?>">Личный кабинет</a></li>
 								<?php else : ?>
-									<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>login">Вход</a></li>
-									<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>register">Регистрация</a></li>
+									<li><a href="<?php echo esc_url( home_url( '/login' ) ); ?>">Вход</a></li>
+									<li><a href="<?php echo esc_url( home_url( '/register' ) ); ?>">Регистрация</a></li>
 								<?php endif; ?>
 							</ul>
 						</div>
@@ -97,7 +97,7 @@
 							
 						</div><!--header-site-name end here-->
 						
-						<a class="btn-add-event" href="#">Добавить мероприятие</a>
+						<a class="btn-add-event" href="<?php echo esc_url( home_url( '/create' ) ); ?>">Добавить мероприятие</a>
 					</div>
 
 					<div class="col-lg-1">
